@@ -21,7 +21,7 @@ Además de nextjs-toast-notify, puedes instalar los siguientes paquetes opcional
 
 ## Resultado Filnal
 
-![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/like-dislike-con-reactjs.png)
+![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/like-dislike-nextjs-toast-notify.gif)
 
 ### Expresiones de Gratitud 🎁
 
