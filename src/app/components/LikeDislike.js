@@ -6,7 +6,7 @@ import axios from "axios";
 import { useLocalStorage } from "react-use";
 
 // Librería nextjs-toast-notify para notificar al usuario de la forma mas agradable la acción realizada
-import { toast } from "nextjs-toast-notify";
+import { showToast } from "nextjs-toast-notify";
 
 const LikeDislike = () => {
   // Estado para los datos de la API
@@ -44,7 +44,7 @@ const LikeDislike = () => {
     setLikes(updatedLikes);
 
     // Notificar al usuario de la forma mas agradable la acción
-    toast.success("¡Like registrado con éxito, gracias 😘!", {
+    showToast.success("¡Like registrado con éxito, gracias 😘!", {
       duration: 3000,
       position: "bottom-center",
       transition: "swingInverted",
@@ -63,7 +63,7 @@ const LikeDislike = () => {
     setDislikes(updatedDislikes);
 
     // Notificar al usuario de la forma mas agradable la acción
-    toast.error("Dislike registrado con éxito, gracias 😭!", {
+    showToast.error("Dislike registrado con éxito, gracias 😭!", {
       duration: 4000,
       position: "top-right",
       transition: "fadeIn",
@@ -105,8 +105,14 @@ const LikeDislike = () => {
               {item.first_name} {item.last_name}
             </h4>
             <p style={{ display: "flex", justifyContent: "space-around" }}>
-              <i className="bi bi-emoji-heart-eyes" onClick={() => manejarLike(item.id)}></i>
-              <i className="bi bi-emoji-angry" onClick={() => manejarDislike(item.id)}></i>
+              <i
+                className="bi bi-emoji-heart-eyes"
+                onClick={() => manejarLike(item.id)}
+              ></i>
+              <i
+                className="bi bi-emoji-angry"
+                onClick={() => manejarDislike(item.id)}
+              ></i>
             </p>
             <p
               style={{
