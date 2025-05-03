@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["reqres.in", "images.remotePatterns"],
+    domains: ["devsapihub.com", "images.remotePatterns"],
   },
 };
 

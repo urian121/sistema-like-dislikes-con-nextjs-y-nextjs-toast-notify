@@ -18,8 +18,8 @@ const LikeDislike = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://reqres.in/api/users");
-        setData(response.data.data);
+        const response = await axios.get("https://devsapihub.com/api-users/");
+        setData(response.data);
         setIsLoading(false);
       } catch (error) {
         setError(error.message);
@@ -94,7 +94,7 @@ const LikeDislike = () => {
             key={item.id}
           >
             <Image
-              src={item.avatar}
+              src={item.avatar_url}
               width={100}
               height={100}
               className="mr-3 latidos-animation"
@@ -102,8 +102,9 @@ const LikeDislike = () => {
               style={{ display: "inline-block" }}
             />
             <h4 className="mt-2">
-              {item.first_name} {item.last_name}
+              {item.name}
             </h4>
+            <p style={{ fontSize: "12px" }}>{item.email}</p>
             <p style={{ display: "flex", justifyContent: "space-around" }}>
               <i
                 className="bi bi-emoji-heart-eyes"
