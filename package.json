@@ -12,7 +12,7 @@
     "axios": "^1.7.3",
     "bootstrap": "^5.3.3",
     "next": "^15.2.4",
-    "nextjs-toast-notify": "^1.37.0",
+    "nextjs-toast-notify": "^1.45.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-use": "^17.5.1"
